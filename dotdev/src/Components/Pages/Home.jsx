@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, Chip, Typography } from "@mui/material";
+import { Box, Stack, Chip, Typography, Container, Button } from "@mui/material";
 
 const Home = () => {
   return (
@@ -28,12 +28,13 @@ const Home = () => {
             bgcolor: "#2e2e2e",
             width: "20%",
             height: "45px",
-            borderRadius: 3,
+            borderRadius: 5,
             justifyContent: "space-evenly",
             textAlign: "center",
             mt: 2,
             minWidth: "fit-content",
             gap: 1,
+            border: "1px solid #5b5c5b",
           }}
         >
           <Typography sx={{ mt: 1, cursor: "pointer" }} color="white">
@@ -41,7 +42,7 @@ const Home = () => {
           </Typography>
 
           <Typography sx={{ mt: 1, cursor: "pointer" }} color="white">
-            About
+            Dev Journal
           </Typography>
 
           <Typography sx={{ mt: 1, cursor: "pointer" }} color="white">
@@ -49,6 +50,53 @@ const Home = () => {
           </Typography>
         </Stack>
       </Box>
+      {/* Main Content */}
+      <Container>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            width: "65%",
+            mt: 10,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              // flexDirection: "row",
+              alignItems: "flex-start",
+            }}
+          >
+            <img
+              style={{
+                borderRadius: "50%",
+                // marginLeft: "10px",
+                height: "70px",
+                width: "70px",
+              }}
+              src="https://media.licdn.com/dms/image/v2/D5603AQFq17E8o7NgpA/profile-displayphoto-scale_400_400/B56ZeD3mXeHQAg-/0/1750264086049?e=1757548800&v=beta&t=TyFlBLlu66m0oIhV1DjWJRxJ_OfddQ5fYSM-s5PgA7M"
+              alt=""
+            />
+          </Box>
+          <Typography variant="h2" sx={{ color: "white" }}>
+            Welcome to My Portfolio
+          </Typography>
+          <Typography sx={{ color: "white", mt: 2 }}>
+            Hello! My name is Dariel Gutierrez, I am a computer science student
+            @ San Diego State University
+          </Typography>
+          <Typography sx={{ color: "white", mb: 2 }}>
+            I am passionate about software development and love to create
+            innovative solutions. Here you can find my projects, journal, and
+            more about me.
+          </Typography>
+          <Box sx={{ display: "flex", flexDirection: "row" }}>
+            <Button>Github</Button>
+            <Button>LinkedIn</Button>
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
