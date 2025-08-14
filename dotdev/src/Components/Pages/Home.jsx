@@ -1,11 +1,14 @@
 import React from "react";
 import { Box, Stack, Chip, Typography, Container, Button } from "@mui/material";
-
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import AboutMe from "../HomeComponents/AboutMe";
 const Home = () => {
   return (
     <Box
       sx={{
-        height: "100vh",
+        maxHeight: "fit-content",
+        minHeight: "100vh",
         width: "100%",
         bgcolor: "black",
         m: 0,
@@ -59,6 +62,7 @@ const Home = () => {
             alignItems: "flex-start",
             width: "65%",
             mt: 10,
+            mb: 10,
           }}
         >
           <Box
@@ -92,9 +96,20 @@ const Home = () => {
             more about me.
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
-            <Button>Github</Button>
-            <Button>LinkedIn</Button>
+            <Button sx={{ color: "white" }} href="https://github.com/darielgu">
+              <GitHubIcon />
+            </Button>
+            <Button
+              sx={{ color: "white" }}
+              href="https://www.linkedin.com/in/dariel-gutierrez/"
+            >
+              <LinkedInIcon />
+            </Button>
           </Box>
+        </Box>
+
+        <Box sx={{ flexDirection: "column", width: "100%", mt: 10, mb: 10 }}>
+          <AboutMe />
         </Box>
       </Container>
     </Box>
